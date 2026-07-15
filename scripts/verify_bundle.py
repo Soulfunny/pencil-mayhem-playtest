@@ -22,8 +22,8 @@ for relative in required:
         fail(f"required file is missing: {relative}")
 
 index_text = (site / "index.html").read_text(encoding="utf-8")
-if 'name="pencil-mayhem-build" content="M1-20260715"' not in index_text:
-    fail("expected M1 build marker is missing")
+if 'name="pencil-mayhem-build" content="M1.1-20260715"' not in index_text:
+    fail("expected M1.1 build marker is missing")
 if 'name="robots" content="noindex, nofollow, noarchive"' not in index_text:
     fail("noindex marker is missing")
 
